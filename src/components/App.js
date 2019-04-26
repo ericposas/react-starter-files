@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
 import {connect} from 'react-redux'
 import { mapState, mapDispatch } from '../Actions/ActionCreators'
 
-class App extends React.Component {
+class App extends Component {
   componentDidMount(){
     const { test, testWithParam } = this.props
     setTimeout(test, 2000)
@@ -13,9 +13,9 @@ class App extends React.Component {
   render(){
     const { testResult } = this.props
     return(
-      <React.Fragment>
+      <Fragment>
         <div>{testResult}</div>
-      </React.Fragment>
+      </Fragment>
     )
   }
 }
