@@ -1,5 +1,5 @@
 const path = require('path')
-const html_plugin = require('html-webpack-plugin')
+const htmlPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: ['@babel/polyfill', './src/index.js'],
@@ -28,9 +28,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new html_plugin({
+    new htmlPlugin({
       filename: './index.html'
-      // template: './src/index.html'
     })
   ]
 }
